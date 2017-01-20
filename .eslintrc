@@ -1,0 +1,101 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "jasmine": true
+  },
+  "globals": {
+    "ReactElement": true,
+    "document": true,
+    "window": true,
+    "location": true,
+    "FileReader": true,
+    "Image": true,
+    "localStorage": true,
+    "require": true,
+    "fetch": true,
+    "parseInt": true,
+    "encodeURIComponent": true,
+    "JSEncrypt": true,
+    "CryptoJS": true
+  },
+  "rules": {
+    "eqeqeq": [
+      2,
+      "allow-null"
+    ],
+    "quotes": 0,
+    "object-curly-spacing": 0,
+    "space-before-blocks": 0,
+    "arrow-body-style": [
+      0,
+      "as-needed",
+      {
+        "requireReturnForObjectLiteral": true
+      }
+    ],
+    "max-len": [
+      "error",
+      120
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "no-trailing-spaces": 0,
+    "id-length": 0,
+    "no-nested-ternary": 0,
+    "comma-dangle": 0,
+    "no-multiple-empty-lines": 0,
+    "react/jsx-no-bind": 0,
+    "react/no-did-mount-set-state": 2,
+    "react/no-multi-comp": 0,
+    "react/no-unused-prop-types": [
+      0,
+      {
+        "skipShapeProps": true
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      1,
+      {
+        "selfClosing": "tag-aligned"
+      }
+    ],
+    "react/jsx-boolean-value": [
+      2,
+      "always"
+    ],
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "displayName",
+          "propTypes",
+          "contextTypes",
+          "childContextTypes",
+          "mixins",
+          "statics",
+          "defaultProps",
+          "getDefaultProps",
+          "getInitialState",
+          "getChildContext",
+          "componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount",
+          "/^on.+$/",
+          "/^get.+$/",
+          "/^render.+$/",
+          "/^.+$/",
+          // All other methods go here
+          "render"
+        ]
+      }
+    ]
+  }
+}
