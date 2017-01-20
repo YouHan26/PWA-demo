@@ -8,6 +8,7 @@ var https = require('https');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
+var proxy = require('http-proxy-middleware');
 var cookieParser = require('cookie-parser');
 var compression = require('compression');
 var helmet = require('helmet');
@@ -51,6 +52,12 @@ app.use(bodyParser.urlencoded({
   extended: true,
   limit: '50mb'
 })); // for parsing application/x-www-form-urlencoded
+
+
+app.use('**/v2/**', proxy({
+  target: 'http://192.168.0.124:9090/histreet-portal',
+  changeOrigin: true
+}));
 
 /**
  * cookie parser
